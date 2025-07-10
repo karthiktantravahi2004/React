@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #facc15; /* Yellowish Batman-like theme */
+}
+
+.searchbar input {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  width: 250px;
+  max-width: 100%;
+  outline: none;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+}
+
+.searchbar input::placeholder {
+  color: #bbb;
+}
+
+.icon img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #facc15;
+}
