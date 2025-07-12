@@ -1,40 +1,51 @@
-header {
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding: 15px 30px;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
 }
 
-.logo h1 {
-  margin: 0;
-  font-size: 28px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #facc15; /* Yellowish Batman-like theme */
+.logo {
+  width: 150px;
 }
 
-.searchbar input {
-  padding: 10px 15px;
-  border-radius: 25px;
-  border: none;
-  width: 250px;
-  max-width: 100%;
-  outline: none;
-  font-size: 16px;
-  background-color: #333;
-  color: white;
+.nav-items {
+  padding: 0px 30px;
 }
 
-.searchbar input::placeholder {
-  color: #bbb;
+.nav-items > ul {
+  display: flex;
+  font-size: 24px;
+  list-style-type: none;
 }
 
-.icon img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #facc15;
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.res-card {
+  width: 200px;
+
+  padding: 6px;
+  margin: 5px;
+}
+
+.res-card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.search {
+  padding: 20px 20px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.res-logo {
+  width: 100%;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
 }
