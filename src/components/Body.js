@@ -1,12 +1,12 @@
 import Restrauntcard from "./restrauntCard";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Shimmer from "../components/Shimmer";
+import { Link } from "react-router-dom";
+
 const Body = () => {
   const [listOfRestaraunts, setlistOfRestaraunts] = useState([]);
   const [searchText, setsearchText] = useState("");
   const [filteredRestraunt, setfilteredRestraunt] = useState([]);
-
-  console.log("hehe");
 
   useEffect(() => {
     fetchData();
@@ -18,7 +18,6 @@ const Body = () => {
     );
 
     const json = await data.json();
-    console.log(json);
     setlistOfRestaraunts(
       json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
@@ -58,9 +57,9 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaraunts.filter(
-              (res) => res.info.avgRating > 4.4
+              (res) => res.info.avgRating >= 4.5
             );
-            setlistOfRestaraunts(filteredList);
+            setfilteredRestraunt(filteredList);
           }}
         >
           Top rated restraunt's
@@ -68,7 +67,9 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestraunt.map((restraunt) => (
-          <Restrauntcard key={restraunt.info.id} resData={restraunt} />
+          <Link to={"/restraunts/" + restraunt.info.id} key={restraunt.info.id}>
+            <Restrauntcard resData={restraunt} />
+          </Link>
         ))}
       </div>
     </div>

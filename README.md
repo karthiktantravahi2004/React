@@ -19,3 +19,15 @@
 - Https
 - tree shaking - remove unused code
 - different dev and production bundles
+
+# React Hooks
+
+(Normal JS utility functions)
+
+- useState() - Superpowerful State Variables in react
+- useEffect()
+
+# 2 Types of Routing in web Apps
+
+- Client side Routing
+- Server side Routing
